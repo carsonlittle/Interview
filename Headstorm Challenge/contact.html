@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <Title>Contact Us</Title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel = "icon" type = "image/png" href = "Krabby_Patty.png">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="contact-form.css">
+    <div class="topnav">
+        <a  href="index.html">Home</a>
+        <a class="active" href="contact.html">Contact</a>
+        <a href="menu.html">Menu</a>
+    </div>
+</head>
+
+<body>
+    
+<link href="contact-form.css" rel="stylesheet">
+
+<div class="fcf-body">
+
+    <div id="fcf-form">
+    <h3 class="fcf-h3">Contact Us</h3>
+
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your email address</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button class="g-recaptcha" 
+        data-sitekey="6Ld5G7oZAAAAAEgvj5ffJ5DSHVvf6iNwyp_cFafT" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+        </div>
+
+    </form>
+    
+    <script>
+        function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+        }
+    </script>
+    </div>
+</div>
+
+</body>
+</html>
+<footer>
+    <p>Copyright Carson Little 2020</p>
+</footer>
